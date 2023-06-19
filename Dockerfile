@@ -1,2 +1,7 @@
-FROM nginx
-RUN echo "coucou ici" > /usr/share/nginx/html/index.html
+FROM node:16
+WORKDIR /app
+COPY package*.json ./
+RUN yarn install
+COPY . .
+RUN yarn build
+CMD [ "yarn", "start" ]

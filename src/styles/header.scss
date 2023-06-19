@@ -1,0 +1,26 @@
+.header {
+  margin-bottom: 85px;
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    max-width: 200px;
+  }
+  &__btn.btn{
+      padding: 15px 20px;
+      font-size: 33px;
+      line-height: 1;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #000000;
+      border-radius: 76.9307px;
+      color: #fff;
+      transition: all .3s ease-in-out;
+      &:hover {
+        background: #FF3F12;
+      }
+    }
+}
