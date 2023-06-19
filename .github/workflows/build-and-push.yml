@@ -34,5 +34,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /docker/src
-            docker-compose pull
-            docker-compose up -d
+            docker compose pull
+            docker compose up -d
