@@ -1,0 +1,249 @@
+.stake {
+    display: flex;
+    justify-content: space-between;
+    &__description {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        z-index: -1;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 132%;
+            height: 100%;
+            background-image: url(./../resourses/img/staking/back.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center/center;
+            left: -31%;
+            top: 13%;
+            z-index: -1;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 3.2em;
+        line-height: 1.15;
+        margin-bottom: 55px;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 25px;
+    }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 25px;
+        justify-content: space-between;
+        gap: 6%;
+    }
+    &__item {
+        width: 47%;
+        margin-bottom: 45px;
+        p {
+            font-weight: 400;
+            margin-top: 8px;
+        }
+        p + p{
+            margin-top: 0;
+        }
+    }
+    &__block {
+        display: flex;
+        width: 47%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__button.css-1fii1tk, &__button.css-1un3lp3 {
+        background-color: #FF3F12;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        border-radius: 66px;
+        height: 73px;
+        padding: 0;
+        border: none;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+    &__input {
+        display: block;
+        border-radius: 66px;
+        padding-left: 210px;
+        border: none;
+        height: 73px;
+        color: #000;
+        position: relative;
+        margin-bottom: 9px;
+        width: 100%;
+    }
+    &__label {
+        position: relative;
+        &::before {
+            content: 'BALANCE';
+            width: 180px;
+            height: 73px;
+            background-color: #C3C3C3;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            border-radius: 66px 0 0 66px;
+            text-align: center;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &--unstake {
+            &::before {
+                content: "SWISTA BALANCE"
+            }
+        }
+    }
+    &__total {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 450%;
+            background-image: url(./../resourses/img/staking/ring.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center/center;
+            left: 23%;
+            top: -220%;
+            z-index: -1;
+        }
+    }
+    &__staked {
+        font-weight: 700;
+        font-size: 4em;
+        margin-left: 25px;
+    }
+}
+@media(max-width: 1680px) {
+    .stake {
+        &__total {
+            &::before {
+                top: -90%;
+            }
+        }
+    }
+}
+@media(max-width: 1280px) {
+    .stake {
+        &__staked {
+            font-size: 3em;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .stake {
+        &__title {
+            font-size: 2.2em;
+        }
+        &__subtitle {
+            font-size: 38px;
+        }
+        &__label {
+            font-size: 18px;
+            &::before {
+                width: 120px;
+            }
+        }
+        &__item {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        &__total {
+            margin-top: 25px;
+            &::before {
+                top: -70%;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .stake {
+        flex-wrap: wrap;
+        &__description {
+            width: 100%;
+        }
+        &__background {
+            width: 100vw;
+            &::before {
+                width: 105%;
+                left: -6%;
+            }
+        }
+        &__block {
+            width: 100%;
+        }
+        &__subtitle, &__wrapper {
+            display: none;
+            &--mob {
+                display: block;
+            }
+        }
+        &__title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        &__label {
+            font-size: 24px;
+           
+            &::before {
+                width: 142px;
+                font-weight: 400;
+            }
+        }
+        &__input {
+            padding-left: 180px;
+        }
+        &__button.css-1fii1tk,  &__button.css-1un3lp3 {
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        &__total {
+            flex-direction: column;
+            font-size: 32px;
+            &::before {
+                width: 100%;
+                top: -80%;
+                left: 0%;
+            }
+        }
+        &__staked {
+            font-size: 60px;
+            margin-left: 0;
+        }
+        &__subtitle {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+    }
+}

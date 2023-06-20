@@ -4,4 +4,5 @@ COPY package*.json ./
 RUN yarn install
 COPY . .
 RUN yarn build
-CMD [ "yarn", "start" ]
+EXPOSE 3000
+CMD [ "node", "src/App.js" ]
