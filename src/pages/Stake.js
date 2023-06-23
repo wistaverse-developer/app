@@ -3,6 +3,7 @@ import { Web3Button, useAddress, useContract, useTokenBalance, useContractRead }
 import { ethers } from "ethers";
 import {STAKE_TOKEN_ADDRESS} from './../constants/addresses';
 import {STAKE_CONTRACT_ADDRESS ,STAKE_TOKEN_SWISTA} from './../constants/addresses';
+import loader from "./../resourses/loader.gif"
 const Stake = () => {
     const address = useAddress();
     const {
@@ -24,28 +25,22 @@ const Stake = () => {
     )
 
     const {
+        data: totalStaked,
+        isLoading: loadStakedTotal
+      } = useTokenBalance(
+          stakeTokenContract,
+          STAKE_CONTRACT_ADDRESS
+      )
+
+    const {
         data: stakeTokenSwistaBalance,
         isLoading: loadStakeTokenBalanceSwista
     } = useTokenBalance(
         stakeTokenContractSwista,
         address
     )
-
-    // const {
-    //     data: stakeInfo,
-    //     refetch: refetchStakeInfo,
-    //     isLoading: loadStakeInfo
-    // } = useContractRead(
-    //     stakeContract,
-    //     "getStakeInfo",
-    //     [address]
-    // );
-
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         refetchStakeInfo()
-    //     }, 10000)
-    // }, [])
+    
+    
     const [stakeAmount, setStakeAmount] = useState("0");
     const [unStakeAmount, setUnStakeAmount] = useState("0");
 
@@ -54,7 +49,7 @@ const Stake = () => {
         setUnStakeAmount("0");
     }
     return (
-        <section className="stake">
+        <section className="stake container">
             <div className="stake__description">
             <div className="stake__background"></div>
                 <h1 className="stake__title">STAKE WISTA TO GET 
@@ -82,7 +77,33 @@ const Stake = () => {
                 </div>
             </div>
             <div className="stake__block">
-                <h2 className="stake__subtitle">stake wista</h2>
+                <div className="stake__info">
+                    <h2 className="stake__subtitle">stake wista</h2>
+                    <div className="stake__balance">
+                        <p className="stake__wista">BALANCE WI$TA 
+                        {
+                            stakeTokenContract ? (
+                                <span> {stakeTokenBalance?.displayValue}</span>
+                            ) : (
+                                <span> 0</span>
+                            )
+                        }
+                        
+                        
+                        </p>
+                        <p className="stake__swista">BALANCE $WISTA
+                        {
+                            stakeTokenContractSwista ? (
+                                <span> {stakeTokenSwistaBalance?.displayValue}</span>
+                            ) : (
+                                <span> 0</span>
+                            )
+                        }
+                        
+                        </p>
+                    </div>
+                </div>
+               
                 <label className="stake__label">
                     <input className="stake__input" type="number"
                     value={stakeAmount} max={stakeTokenBalance?.displayValue}
@@ -109,7 +130,7 @@ const Stake = () => {
                     >STAKE!</Web3Button>
 
                 <label className="stake__label stake__label--unstake">
-                    <input className="stake__input" type="number" value={unStakeAmount}
+                    <input className="stake__input"  max={stakeTokenSwistaBalance?.displayValue} type="number" value={unStakeAmount}
                     onChange={(e) => setUnStakeAmount(e.target.value)}/>
                 </label>
                 <Web3Button
@@ -132,12 +153,13 @@ const Stake = () => {
                 <div className="stake__total">
                     <h2 className="stake__subtitle stake__subtitle--mob">total wista stacked</h2>
                     <div className="stake__staked">{
-                        stakeTokenContractSwista ? (
-                            <div>{stakeTokenSwistaBalance?.displayValue} SWISTA</div>
+                        (stakeTokenContract && totalStaked) ? (
+                            <div>{Math.round(+totalStaked?.displayValue)} WISTA</div>
                         ) : (
-                            <div>0</div>
+                            <div className="stake__loader">0 WISTA</div>
                         )
                     }</div>
+                    
                 </div>
             </div>
         </section>

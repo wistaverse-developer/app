@@ -92,7 +92,7 @@
     &__label {
         position: relative;
         &::before {
-            content: 'BALANCE';
+            content: 'WI$TA';
             width: 180px;
             height: 73px;
             background-color: #C3C3C3;
@@ -110,7 +110,7 @@
         }
         &--unstake {
             &::before {
-                content: "SWISTA BALANCE"
+                content: "$WISTA"
             }
         }
     }
@@ -139,6 +139,49 @@
         font-size: 4em;
         margin-left: 25px;
     }
+    &__loader {
+        width: 55px;
+        height: 55px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__info {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 400;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -15px;
+            width: 500px;
+            height: 55px;
+            background-image: url(./../resourses/img/staking/string.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+        }
+    }
+    &__balance {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        p {
+            display: block;
+            margin-bottom: 25px;
+            span {
+                font-weight: 700;
+            }
+        }
+        // align-items: center;
+    }
+    
 }
 @media(max-width: 1680px) {
     .stake {
@@ -147,12 +190,26 @@
                 top: -90%;
             }
         }
+        &__info {
+            &::before {
+                width: 385px;
+                height: 40px;
+            }
+        }
     }
 }
 @media(max-width: 1280px) {
     .stake {
         &__staked {
             font-size: 3em;
+        }
+        &__balance {
+            gap: 10px;
+        }
+        &__info {
+            &::before {
+                top: 16px;
+            }
         }
     }
 }
@@ -182,11 +239,17 @@
                 top: -70%;
             }
         }
+        &__info {
+            &::before {
+                top: 27px;
+            }
+        }
     }
 }
 
 @media(max-width: 768px) {
     .stake {
+        // position: relative;
         flex-wrap: wrap;
         &__description {
             width: 100%;
@@ -244,6 +307,40 @@
         &__subtitle {
             font-size: 32px;
             margin-bottom: 5px;
+        }
+        &__info {
+            &::before {
+                display: none;
+            }
+        }
+        &__balance {
+            position: absolute;
+        }
+        &__wista, &__swista {
+            position: absolute;
+            top: -275px;
+            z-index: 2;
+            width: 90vw;
+            font-size: 21px;
+            width: 110px;
+        }
+        &__wista {
+            left: 0;
+        }
+        &__swista {
+            left: 69vw;
+            text-align: end;
+        }
+    }
+}
+
+@media(max-width: 386px) {
+    .stake {
+        &__wista, &__swista {
+            top: -325px;
+        }
+        &__swista {
+            left: 60vw;
         }
     }
 }

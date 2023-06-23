@@ -1,7 +1,5 @@
 import Navbar from "./components/Navbar";
-import StakeToken from "./components/StakeToken";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-// import Stake from "./components/Stake";
 import Stake from "./pages/Stake";
 import Main from "./pages/Main";
 
@@ -13,7 +11,7 @@ export default function Home() {
     return (
       <>
       <BrowserRouter>
-        <div className="container noise">
+        <div className="noise">
           <main className="main">
           <Navbar/>
           <Routes>
@@ -32,17 +30,17 @@ export default function Home() {
   }
   return (
     <BrowserRouter>
-       <div className="container noise">
+       <div className="noise">
           <main className="main">
           <Navbar/>
+          {/* <Stake/> */}
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/stake/" element={<Stake/>}/>
           </Routes>
-        
           </main>
         </div>
-    </BrowserRouter>
+   </BrowserRouter>
    
   );
 }
