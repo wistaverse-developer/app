@@ -58,7 +58,7 @@ const Stake = () => {
                 <h2 className="stake__subtitle">Rewards and incentives:</h2>
                 <div className="stake__wrapper">
                     <div className="stake__item">
-                        By staking your wista you access a special role in the community, you also receive frequent rewards
+                        By staking your wista you access a special  role in the community, you also receive frequent rewards
                     </div>
                     <div className="stake__item">
                         Rewards are based on the amount of Wi$ta staked and the time you've been staking
