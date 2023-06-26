@@ -92,7 +92,7 @@
     &__label {
         position: relative;
         &::before {
-            content: 'WI$TA';
+            content: 'WISTA';
             width: 180px;
             height: 73px;
             background-color: #C3C3C3;
@@ -110,7 +110,7 @@
         }
         &--unstake {
             &::before {
-                content: "$WISTA"
+                content: "sWISTA"
             }
         }
     }
