@@ -61,7 +61,7 @@ const Stake = () => {
                         By staking your wista you access a special role in the community, you also receive frequent rewards
                     </div>
                     <div className="stake__item">
-                        Rewards are based on the amount of Wi$ta staked and the time you've ben staking
+                        Rewards are based on the amount of Wi$ta staked and the time you've been staking
                     </div>
                     <div className="stake__item">
                         Rewards:
@@ -70,9 +70,9 @@ const Stake = () => {
                     </div>
                     <div className="stake__item">
                         stakers advantages:
-                        <p>—  Increased voiting power</p>
+                        <p>—  Increased voting power</p>
                         <p>— Access to exclusive channels</p>
-                        <p>— Get paid to provide moderation to the platform    to protect it from bsd actors</p>
+                        <p>— Get paid to provide moderation to the platform    to protect it from bad actors</p>
                     </div>
                 </div>
             </div>
