@@ -85,7 +85,7 @@ const Main = () => {
             </div> */}
           </div>
 
-          <Link to="/stake/" className="info__btn">Let`s stake</Link>
+          <Link to="/stake/" className="info__btn">Let's stake</Link>
 
           <div className="info__col">
             <div className="info__item">
