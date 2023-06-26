@@ -36,3 +36,4 @@ jobs:
             cd /docker/src
             docker compose pull
             docker compose up -d
+            docker system prune -f
