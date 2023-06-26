@@ -97,7 +97,7 @@ const Main = () => {
                   )
                 }
                 
-              <div className="info__descr">Treasyre Balance</div>
+              <div className="info__descr">Treasury Balance</div>
             </div>
 
             <div className="info__item">
