@@ -55,7 +55,7 @@ const Stake = () => {
                 <h1 className="stake__title">STAKE WISTA TO GET 
                     REWARDS AND ENHANCE YOUR 
                     COMMUNITY ROLE</h1>
-                <h2 className="stake__subtitle">Rewards and incentivies:</h2>
+                <h2 className="stake__subtitle">Rewards and incentives:</h2>
                 <div className="stake__wrapper">
                     <div className="stake__item">
                         By staking your wista you access a special role in the community, you also receive frequent rewards
