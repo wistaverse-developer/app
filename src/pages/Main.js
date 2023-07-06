@@ -97,7 +97,7 @@ const Main = () => {
             </div> */}
           </div>
 
-          <Link to="/stake/" className="info__btn">Let`s stake</Link>
+          <Link to="/stake/" className="info__btn">Let's stake</Link>
 
           <div className="info__col">
             <div className="info__item">
@@ -109,7 +109,7 @@ const Main = () => {
                   )
                 }
                 
-              <div className="info__descr">Treasyre Balance</div>
+              <div className="info__descr">Treasury Balance</div>
             </div>
 
             <div className="info__item">
