@@ -54,15 +54,15 @@ const Stake = () => {
             <div className="stake__description">
             <div className="stake__background"></div>
                 <h1 className="stake__title">STAKE WISTA TO GET 
-                    REWARDS AND ENHANCEYOUR 
+                    REWARDS AND ENHANCE YOUR 
                     COMMUNITY ROLE</h1>
-                <h2 className="stake__subtitle">Rewards and incetivies:</h2>
+                <h2 className="stake__subtitle">Rewards and incentives:</h2>
                 <div className="stake__wrapper">
                     <div className="stake__item">
-                        By staking your wista you access a special role in the commynity, you also receive frequent rewards
+                        By staking your wista you access a special role in the community, you also receive frequent rewards
                     </div>
                     <div className="stake__item">
-                        Rewards are based on the amount of Wi$ta staked and the time youve ben staking
+                        Rewards are based on the amount of Wi$ta staked and the time you've been staking
                     </div>
                     <div className="stake__item">
                         Rewards:
@@ -71,9 +71,9 @@ const Stake = () => {
                     </div>
                     <div className="stake__item">
                         stakers advantages:
-                        <p>—  eIncreased voiting power</p>
-                        <p>— Access to exclusive chanels</p>
-                        <p>— Get paid to provide moderation to the platform    to protect it from bsd actors</p>
+                        <p>—  Increased voting power</p>
+                        <p>— Access to exclusive channels</p>
+                        <p>— Get paid to provide moderation to the platform    to protect it from bad actors</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ const Stake = () => {
                 <div className="stake__info">
                     <h2 className="stake__subtitle">stake wista</h2>
                     <div className="stake__balance">
-                        <p className="stake__wista">BALANCE WI$TA 
+                        <p className="stake__wista">BALANCE WISTA 
                         {
                             stakeTokenContract ? (
                                 <span> {stakeTokenBalance?.displayValue}</span>
@@ -92,7 +92,7 @@ const Stake = () => {
                         
                         
                         </p>
-                        <p className="stake__swista">BALANCE $WISTA
+                        <p className="stake__swista">BALANCE sWISTA
                         {
                             stakeTokenContractSwista ? (
                                 <span> {stakeTokenSwistaBalance?.displayValue}</span>
@@ -152,7 +152,7 @@ const Stake = () => {
                     }
                     >UNSTAKE!</Web3Button>
                 <div className="stake__total">
-                    <h2 className="stake__subtitle stake__subtitle--mob">total wista stacked</h2>
+                    <h2 className="stake__subtitle stake__subtitle--mob">total wista staked</h2>
                     <div className="stake__staked">{
                         (stakeTokenContract && totalStaked) ? (
                             <div>{Math.round(+totalStaked?.displayValue)} WISTA</div>
