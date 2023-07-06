@@ -33,7 +33,6 @@ export default function Home() {
        <div className="noise">
           <main className="main">
           <Navbar/>
-          {/* <Stake/> */}
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/stake/" element={<Stake/>}/>

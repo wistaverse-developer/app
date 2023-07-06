@@ -9,8 +9,20 @@ const Main = () => {
 
   const [marketCap, setMarketCap] = useState(0);
   const [wistaPrice, setWistaPrice] = useState(0);
-  // const [tvl, setTvl] = useState(0);
+  const [stakeContractABI, setStakeContractABI] = useState([]);
 
+  async function getABIContract () {
+    let url = 'https://api.polygonscan.com/api?module=contract&action=getabi&address=0xC7BBEA10283954c3D920EB1aD944C3c143D3401D&apikey=TPWCQH39DEATMVMBXQ666897DX4M1PM51A';
+          let response = await fetch(url).then(res => res.json());
+          let stakeContractABI = JSON.parse(response.result);
+          return setStakeContractABI(stakeContractABI);
+   }
+
+   useEffect(() => {
+    // getABIContract();
+   }, []);
+
+  console.log(stakeContractABI);
   async function getMarketCap () {
     let url = './result.json';
           let response = await fetch(url).then(res => (res.json()));
@@ -47,7 +59,7 @@ const Main = () => {
       stakeTokenContract,
       STAKE_CONTRACT_ADDRESS
   )
-
+    console.log(stakeContract)
   //  async function getTVL () {
   //   let url = './result.json';
   //         let response = await fetch(url).then(res => (res.json()));
@@ -85,7 +97,7 @@ const Main = () => {
             </div> */}
           </div>
 
-          <Link to="/stake/" className="info__btn">Let's stake</Link>
+          <Link to="/stake/" className="info__btn">Let`s stake</Link>
 
           <div className="info__col">
             <div className="info__item">
@@ -97,7 +109,7 @@ const Main = () => {
                   )
                 }
                 
-              <div className="info__descr">Treasury Balance</div>
+              <div className="info__descr">Treasyre Balance</div>
             </div>
 
             <div className="info__item">
