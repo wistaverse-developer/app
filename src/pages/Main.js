@@ -12,14 +12,14 @@ const Main = () => {
   const [stakeContractABI, setStakeContractABI] = useState([]);
 
   async function getABIContract () {
-    let url = 'https://api.polygonscan.com/api?module=contract&action=getabi&address=0xC7BBEA10283954c3D920EB1aD944C3c143D3401D&apikey=TPWCQH39DEATMVMBXQ666897DX4M1PM51A';
+    let url = 'https://api.polygonscan.com/api?module=contract&action=getabi&address=0x2506d8A259eDe5071dfF129c13700B01eEa17671&apikey=TPWCQH39DEATMVMBXQ666897DX4M1PM51A';
           let response = await fetch(url).then(res => res.json());
           let stakeContractABI = JSON.parse(response.result);
           return setStakeContractABI(stakeContractABI);
    }
 
    useEffect(() => {
-    // getABIContract();
+    getABIContract();
    }, []);
 
   console.log(stakeContractABI);
@@ -43,7 +43,7 @@ const Main = () => {
   } = useContract(STAKE_TOKEN_ADDRESS, 'token');
   const {
     contract: stakeContract
-  } = useContract(STAKE_CONTRACT_ADDRESS, 'custom');
+  } = useContract(STAKE_CONTRACT_ADDRESS, stakeContractABI);
   const {
     data: tresuareBalanse,
     isLoading: loadStakeBalance
@@ -59,7 +59,7 @@ const Main = () => {
       stakeTokenContract,
       STAKE_CONTRACT_ADDRESS
   )
-    console.log(stakeContract)
+  console.log(stakeContract)
   //  async function getTVL () {
   //   let url = './result.json';
   //         let response = await fetch(url).then(res => (res.json()));
