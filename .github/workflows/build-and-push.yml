@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and tag Docker image
-        run: docker build -t wistaverse/app:latest .
+        run: docker build --no-cache -t wistaverse/app:latest .
       
       - name: Push Docker image to Docker Hub
         run: docker push wistaverse/app:latest
