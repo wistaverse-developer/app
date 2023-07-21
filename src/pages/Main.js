@@ -19,7 +19,7 @@ const Main = () => {
    }
 
    useEffect(() => {
-    getABIContract();
+    // getABIContract();
    }, []);
 
   console.log(stakeContractABI);
@@ -43,7 +43,7 @@ const Main = () => {
   } = useContract(STAKE_TOKEN_ADDRESS, 'token');
   const {
     contract: stakeContract
-  } = useContract(STAKE_CONTRACT_ADDRESS, stakeContractABI);
+  } = useContract(STAKE_CONTRACT_ADDRESS, 'custom');
   const {
     data: tresuareBalanse,
     isLoading: loadStakeBalance
