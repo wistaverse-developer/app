@@ -4,8 +4,9 @@ import { useContract, useTokenBalance, useContractRead } from "@thirdweb-dev/rea
 import {STAKE_TOKEN_ADDRESS, STAKE_OWNER_ADDRESS, STAKE_CONTRACT_ADDRESS} from './../constants/addresses';
 
 
-
 const Main = () => {
+
+  
 
   const [marketCap, setMarketCap] = useState(0);
   const [wistaPrice, setWistaPrice] = useState(0);
@@ -22,9 +23,11 @@ const Main = () => {
     // getABIContract();
    }, []);
 
-  console.log(stakeContractABI);
+  // console.log(stakeContractABI);
+  
+
   async function getMarketCap () {
-    let url = './result.json';
+    let url = '/result.json';
           let response = await fetch(url).then(res => (res.json()));
           let market = (JSON.parse(response).data[24991].self_reported_market_cap / 1000).toFixed(0);
           setMarketCap(market)
@@ -32,7 +35,7 @@ const Main = () => {
    getMarketCap();
 
    async function getWistaPrice () {
-    let url = './result.json';
+    let url = '/result.json';
           let response = await fetch(url).then(res => (res.json()));
           let price = JSON.parse(response).data[24991].quote.USD.price.toFixed(9);
           setWistaPrice(price)
