@@ -11,7 +11,7 @@ $parameters = [
 
 $headers = [
     'Accepts: application/json',
-    'X-CMC_PRO_API_KEY: 81b9a5c2-d77b-4178-ba6d-5f3189058f9b'
+    'X-CMC_PRO_API_KEY: f8f34826-616e-4d9a-9b4a-41910d63718a'
 ];
 $qs = http_build_query($parameters); // query string encode the parameters
 $request = "{$url}?{$qs}"; // create the request URL
@@ -33,3 +33,4 @@ file_put_contents($file, $result);
 curl_close($curl); // Close request
 // require_once("index.html")
 ?>
+<h1>htllo</h1>
