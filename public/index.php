@@ -33,3 +33,4 @@ file_put_contents($file, $result);
 curl_close($curl); // Close request
 // require_once("index.html")
 ?>
+//public
