@@ -27,14 +27,8 @@ curl_setopt_array($curl, array(
 
 $response = curl_exec($curl); // Send the request, save the response
 $result = json_encode($response);
-$file = 'result.json';
+$file = '/app/public/result.json';
 
 file_put_contents($file, $result);
 curl_close($curl); // Close request
-// require_once("index.html")
 ?>
-<<<<<<< HEAD
-<h1>htllo</h1>
-=======
-
->>>>>>> 4f24d1022cd4a22a1935147ba4f66904c8075e0d
