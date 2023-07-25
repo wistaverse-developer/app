@@ -27,7 +27,7 @@ curl_setopt_array($curl, array(
 
 $response = curl_exec($curl); // Send the request, save the response
 $result = json_encode($response);
-$file = '/app/public/result.json';
+$file = 'result.json';
 
 file_put_contents($file, $result);
 curl_close($curl); // Close request
