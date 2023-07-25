@@ -20,7 +20,8 @@ const Main = () => {
    }
 
    useEffect(() => {
-    // getABIContract();
+    getMarketCap();
+    getWistaPrice();
    }, []);
 
   // console.log(stakeContractABI);
@@ -32,7 +33,6 @@ const Main = () => {
           let market = (JSON.parse(response).data[24991].self_reported_market_cap / 1000).toFixed(0);
           setMarketCap(market)
    }
-   getMarketCap();
 
    async function getWistaPrice () {
     let url = '/result.json';
@@ -40,7 +40,6 @@ const Main = () => {
           let price = JSON.parse(response).data[24991].quote.USD.price.toFixed(9);
           setWistaPrice(price)
    }
-   getWistaPrice();
   const {
     contract: stakeTokenContract
   } = useContract(STAKE_TOKEN_ADDRESS, 'token');
