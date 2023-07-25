@@ -27,7 +27,7 @@ const Main = () => {
   
 
   async function getMarketCap () {
-    let url = '/result.json';
+    let url = '/app/public/result.json';
           let response = await fetch(url).then(res => (res.json()));
           let market = (JSON.parse(response).data[24991].self_reported_market_cap / 1000).toFixed(0);
           setMarketCap(market)
@@ -35,7 +35,7 @@ const Main = () => {
    getMarketCap();
 
    async function getWistaPrice () {
-    let url = '/result.json';
+    let url = '/app/public/result.json';
           let response = await fetch(url).then(res => (res.json()));
           let price = JSON.parse(response).data[24991].quote.USD.price.toFixed(9);
           setWistaPrice(price)
@@ -62,7 +62,7 @@ const Main = () => {
       stakeTokenContract,
       STAKE_CONTRACT_ADDRESS
   )
-  console.log(stakeContract)
+  // console.log(stakeContract)
   //  async function getTVL () {
   //   let url = './result.json';
   //         let response = await fetch(url).then(res => (res.json()));
