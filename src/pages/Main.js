@@ -30,7 +30,7 @@ const Main = () => {
   async function getMarketCap () {
     let url = '/result.json';
           let response = await fetch(url).then(res => (res.json()));
-          let market = (JSON.parse(response).data[24991].self_reported_market_cap / 1000).toFixed(0);
+          let market = JSON.parse(response).data[24991].self_reported_market_cap.toFixed(0);
           setMarketCap(market)
    }
 
