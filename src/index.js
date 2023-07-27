@@ -10,14 +10,13 @@ import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 // Change this to the chain your app is built for.
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "polygon";
-console.log(Polygon)
 const container = document.getElementById("root");
 const root = createRoot(container);
 const sdk = new ThirdwebSDK("polygon", {
-    clientId: "70bb71037bf21ede4667bd5bfa49156d"
+    clientId: "13a385f968380eef3358556f47ef07a7"
   });
 root.render(
-    <ThirdwebProvider activeChain={Polygon} clientId="70bb71037bf21ede4667bd5bfa49156d">
+    <ThirdwebProvider activeChain={Polygon} clientId="13a385f968380eef3358556f47ef07a7">
         <App />
     </ThirdwebProvider>
 );
