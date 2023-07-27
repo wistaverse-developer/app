@@ -71,7 +71,7 @@ const Stake = () => {
             <div className="stake__description">
             <div className="stake__background"></div>
                 <h1 className="stake__title">STAKE WISTA TO GET 
-                    REWARDS AND ENHANCEYOUR 
+                    REWARDS AND ENHANCE YOUR 
                     COMMUNITY ROLE</h1>
                 <h2 className="stake__subtitle">Rewards and incetivies:</h2>
                 <div className="stake__wrapper">
@@ -169,7 +169,7 @@ const Stake = () => {
                     }
                     >UNSTAKE!</Web3Button>
                 <div className="stake__total">
-                    <h2 className="stake__subtitle stake__subtitle--mob">total wista stacked</h2>
+                    <h2 className="stake__subtitle stake__subtitle--mob">total wista staked</h2>
                     <div className="stake__staked">{
                         (stakeTokenContract && totalStaked) ? (
                             <div>{Math.round(+totalStaked?.displayValue)} WISTA</div>

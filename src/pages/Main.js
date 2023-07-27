@@ -122,7 +122,7 @@ const Main = () => {
                     <div className="info__num">0 WISTA</div>
                   )
                 }
-              <div className="info__descr">Total Stake</div>
+              <div className="info__descr">Total Wista Staked</div>
             </div>
           </div>
         </div>
