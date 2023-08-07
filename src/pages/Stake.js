@@ -3,6 +3,7 @@ import { Web3Button, useAddress, useContract, useTokenBalance, useContractRead, 
 import { ethers } from "ethers";
 import {STAKE_TOKEN_ADDRESS} from './../constants/addresses';
 import {STAKE_CONTRACT_ADDRESS ,STAKE_TOKEN_SWISTA} from './../constants/addresses';
+import loader from './../resourses/loader.svg';
 
 const Stake = () => {
     const address = useAddress();
@@ -17,7 +18,7 @@ const Stake = () => {
    }
 
    useEffect(() => {
-    getABIContract();
+    // getABIContract();
    }, []);
    const {
     contract: stakeContract
@@ -100,10 +101,10 @@ const Stake = () => {
                     <div className="stake__balance">
                         <p className="stake__wista">BALANCE WI$TA 
                         {
-                            stakeTokenContract ? (
+                            !loadStakeTokenBalance ? (
                                 <span> {stakeTokenBalance?.displayValue}</span>
                             ) : (
-                                <span> 0</span>
+                                <span>  <svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp"></circle></svg></span>
                             )
                         }
                         
@@ -111,10 +112,10 @@ const Stake = () => {
                         </p>
                         <p className="stake__swista">BALANCE $WISTA
                         {
-                            stakeTokenContractSwista ? (
+                            !loadStakeTokenBalanceSwista ? (
                                 <span> {stakeTokenSwistaBalance?.displayValue}</span>
                             ) : (
-                                <span> 0</span>
+                                <span> <svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp"></circle></svg></span>
                             )
                         }
                         
@@ -174,7 +175,7 @@ const Stake = () => {
                         (stakeTokenContract && totalStaked) ? (
                             <div>{Math.round(+totalStaked?.displayValue)} WISTA</div>
                         ) : (
-                            <div className="stake__loader">0 WISTA</div>
+                            <div className="stake__loader"><svg viewBox="0 0 50 50" className="loader  loader--big"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp "></circle></svg> WISTA</div>
                         )
                     }</div>
                     

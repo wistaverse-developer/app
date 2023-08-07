@@ -40,6 +40,9 @@
     border-radius: 66px;
     text-align: center;
     min-width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   &__descr {
     text-align: center;

@@ -84,12 +84,26 @@ const Main = () => {
 
           <div className="info__col">
             <div className="info__item">
-              <div className="info__num">${wistaPrice}</div>
+              {
+                (wistaPrice) ? (
+                  <div className="info__num">${wistaPrice}</div>
+                ) : (
+                  <svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp css-axmsrp--black"></circle></svg>
+                )
+                
+              }
+              
               <div className="info__descr">wista price</div>
             </div>
 
             <div className="info__item">
-              <div className="info__num">${marketCap}</div>
+              {
+                (marketCap) ? (
+                  <div className="info__num">${marketCap}</div>
+                ) : (
+                  <svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp css-axmsrp--black"></circle></svg>
+                )
+              }
               <div className="info__descr">Marketcap</div>
             </div>
 
@@ -107,7 +121,7 @@ const Main = () => {
                   (stakeTokenContract && tresuareBalanse) ? (
                     <div className="info__num">{Math.round(+tresuareBalanse?.displayValue)} WISTA</div>
                   ) : (
-                    <div className="info__num">0 WISTA</div>
+                    <div className="info__num"><svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" class="css-axmsrp css-axmsrp--black"></circle></svg> WISTA</div>
                   )
                 }
                 
@@ -119,7 +133,7 @@ const Main = () => {
                   (stakeTokenContract && totalStaked) ? (
                     <div className="info__num">{Math.round(+totalStaked?.displayValue)} WISTA</div>
                   ) : (
-                    <div className="info__num">0 WISTA</div>
+                    <div className="info__num"><svg viewBox="0 0 50 50" className="loader"><circle cx="25" cy="25" r="20" fill="none" stroke="hsl(246, 6.0%, 9.0%)" stroke-width="4" className="css-axmsrp css-axmsrp--black"></circle></svg> WISTA</div>
                   )
                 }
               <div className="info__descr">Total Wista Staked</div>
