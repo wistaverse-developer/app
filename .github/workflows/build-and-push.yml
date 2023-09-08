@@ -19,6 +19,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+      - name: version
+        run: docker version
+
       - name: Build and tag Docker image
         run: docker build --platform  linux/amd64 -t wistaverse/app:latest .
       
