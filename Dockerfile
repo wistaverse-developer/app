@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     php-curl
 WORKDIR /app
 COPY package*.json ./
-RUN yarn install
+RUN npm i
 COPY . .
-RUN yarn build
-CMD [ "yarn", "start" ]
+RUN npm run build
+CMD [ "npm", "start" ]
