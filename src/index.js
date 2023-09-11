@@ -13,10 +13,10 @@ const activeChain = "polygon";
 const container = document.getElementById("root");
 const root = createRoot(container);
 const sdk = new ThirdwebSDK("polygon", {
-    clientId: "13a385f968380eef3358556f47ef07a7"
+    clientId: "9558290199131a917a467682b76965de"
   });
 root.render(
-    <ThirdwebProvider activeChain={Polygon} clientId="13a385f968380eef3358556f47ef07a7">
+    <ThirdwebProvider activeChain={Polygon} clientId="9558290199131a917a467682b76965de">
         <App />
     </ThirdwebProvider>
 );
