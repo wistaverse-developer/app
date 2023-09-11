@@ -123,14 +123,14 @@
         &::before {
             content: '';
             position: absolute;
-            width: 90%;
-            height: 450%;
+            width: 740px;
+            height: 520px;
             background-image: url(./../resourses/img/staking/ring.png);
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: center/center;
-            left: 23%;
-            top: -220%;
+            background-position: center;
+            left: 150px;
+            top: -250px;
             z-index: -1;
         }
     }
@@ -138,6 +138,15 @@
         font-weight: 700;
         font-size: 4em;
         margin-left: 25px;
+        div {
+            width: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            height: 115px;
+            align-items: center;
+        }
+        
     }
     &__loader {
         width: 55px;
@@ -187,7 +196,15 @@
     .stake {
         &__total {
             &::before {
-                top: -90%;
+                width: 720px;
+                height: 460px;
+                left: 60px;
+                top: -230px;
+            }
+        }
+        &__staked {
+            div {
+                height: 80px;
             }
         }
         &__info {
@@ -202,6 +219,15 @@
     .stake {
         &__staked {
             font-size: 3em;
+            div {
+                height: 60px;
+            }
+        }
+        &__total {
+            &::before {
+                width: 450px;
+                left: 85px;
+            }
         }
         &__balance {
             gap: 10px;
@@ -236,7 +262,9 @@
         &__total {
             margin-top: 25px;
             &::before {
-                top: -70%;
+                width: 420px;
+                left: 15px;
+                top: -200px;
             }
         }
         &__info {
@@ -296,7 +324,7 @@
             font-size: 32px;
             &::before {
                 width: 100%;
-                top: -80%;
+                top: -170px;
                 left: 0%;
             }
         }
