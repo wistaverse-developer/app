@@ -24,23 +24,6 @@ body {
   pointer-events: none;
   z-index: 3;
 }
-.loader {
-  width: 24px;
-  height: 24px;
-  &--big {
-    width: 55px;
-    height: 55px;
-    display: block;
-    margin-right: 20px;
-  }
-}
-.css-axmsrp {
-  stroke: #fff;
-  stroke-width: 6;
-  &--black {
-    stroke: #2E2E2E;
-  }
-}
 @keyframes tvShow {
   0%{
     background-image: url(./../resourses/img/noise2.png);
@@ -78,7 +61,7 @@ body {
 .main {
   position: relative;
   min-height: 100vh;
-  overflow-x: clip;
+  
 }
 
 .title {
